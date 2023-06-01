@@ -4,3 +4,4 @@
 formulário. Aqui as expressões regulares são usadas para validar campos de nome (até 50 caracteres), campo de email (formato de email válido),
 campo de CPF e campo de telefone (padrão brasileiro (DDD) 00000-0000 ou DDD000000000).
 
+O projeto pode ser visualizado em https://emanuelcatao.github.io/form_regex/
