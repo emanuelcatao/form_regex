@@ -10,4 +10,6 @@ No máximo 50 símbolos alfabéticos e espaço [a-zA-Z ]. </br></br>
 
 O projeto foi executado em next e typescript (meu typescript é horrível, então releva aí, vlw 😜)
 
-Disponível em: <a href="https://form-regex.vercel.app/">Form regex</a>
+Form disponível em: <a href="https://form-regex.vercel.app/">Form regex</a>
+
+Notion database em: <a href="https://slime-cockroach-6f1.notion.site/8b58a230105f43728091f5e2e5e679ba?v=d53fc4e187d344a692341050c8c4e935&pvs=4">Notion's table</a>
