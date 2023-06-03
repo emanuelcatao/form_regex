@@ -9,3 +9,5 @@ No máximo 50 símbolos alfabéticos e espaço [a-zA-Z ]. </br></br>
 <b>Telefone:</b> dois formatos possíveis, sendo o primeiro constituído por somente 11 números; e o segundo pelo "(00)00000-0000".</br>
 
 O projeto foi executado em next e typescript (meu typescript é horrível, então releva aí, vlw 😜)
+
+Disponível em: https://form-regex.vercel.app/
