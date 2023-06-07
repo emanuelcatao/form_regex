@@ -26,18 +26,6 @@ export default function Home() {
 
   const [errors, setErrors] = useState<FormErrors>({});
   const [isFormSubmitted, setIsFormSubmitted] = useState(false);
-  
-  useEffect(() => {
-    let timer: NodeJS.Timeout;
-    if (isFormSubmitted) {
-      timer = setTimeout(() => {
-        setIsFormSubmitted(false);
-      }, 0);
-    }
-    return () => {
-      clearTimeout(timer);
-    };
-  }, [isFormSubmitted]);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
@@ -88,6 +76,9 @@ export default function Home() {
             name: '',
             cpf: '',
           });
+          setTimeout(() => {
+            setIsFormSubmitted(false);
+          }, 1500);
         })
         .catch((e) => {
           return console.log('Erro ao contactar api', e.number);
@@ -150,14 +141,14 @@ export default function Home() {
           />
           {errors.cpf && <span className={styles.errorTag}>{errors.cpf}</span>}
         </div>
+        <button className={styles.btn} type="submit">
+          Submit
+        </button>
         {isFormSubmitted && (
           <div className={styles.floatingMessage}>
             Formulário enviado com sucesso!
           </div>
         )}
-        <button className={styles.btn} type="submit">
-          Submit
-        </button>
       </form>
     </div>
   )
