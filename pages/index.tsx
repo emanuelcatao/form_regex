@@ -70,7 +70,9 @@ export default function Home() {
         .then(() => {
           console.log('É isso, como a gente achou que ia ser!', data);
           setIsFormSubmitted(true);
-          setTimeout(function(){ window. location. reload(); }, 1500);
+          setTimeout(() => {
+            setIsFormSubmitted(false);
+          }, 1500);
         })
         .catch((e) => {
           return console.log('Erro ao contactar api', e.number);
