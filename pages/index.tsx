@@ -26,6 +26,18 @@ export default function Home() {
 
   const [errors, setErrors] = useState<FormErrors>({});
   const [isFormSubmitted, setIsFormSubmitted] = useState(false);
+  
+  useEffect(() => {
+    let timer: NodeJS.Timeout;
+    if (isFormSubmitted) {
+      timer = setTimeout(() => {
+        setIsFormSubmitted(false);
+      }, 0000);
+    }
+    return () => {
+      clearTimeout(timer);
+    };
+  }, [isFormSubmitted]);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
@@ -70,9 +82,12 @@ export default function Home() {
         .then(() => {
           console.log('É isso, como a gente achou que ia ser!', data);
           setIsFormSubmitted(true);
-          setTimeout(() => {
-            setIsFormSubmitted(false);
-          }, 1500);
+          setData({
+            email: '',
+            number: '',
+            name: '',
+            cpf: '',
+          });
         })
         .catch((e) => {
           return console.log('Erro ao contactar api', e.number);
