@@ -37,10 +37,10 @@ export default function Home() {
   const validateForm = () => {
     const newErrors: FormErrors = {};
 
-    const emailRegex =/^[\w_.]*[\w_.]{2}@[\w_.]*[\w_.]{2}\.[a-z]{3}$;
-    const nameRegex = /^[a-zA-Z ]{1,50}$;
-    const cpfRegex = /^\d{3}\.\d{3}\.\d{3}-\d{2}|\d{11}$;
-    const numberRegex = /^\(\d{2}\)\d{5}-\d{4}|\d{11}$;
+    const emailRegex =/^[\w_.]*[\w_.]{2}@[\w_.]*[\w_.]{2}\.[a-z]{3}$/;
+    const nameRegex = /^[a-zA-Z ]{1,50}$/;
+    const cpfRegex = /^\d{3}\.\d{3}\.\d{3}-\d{2}|\d{11}$/;
+    const numberRegex = /^\(\d{2}\)\d{5}-\d{4}|\d{11}$/;
 
     if(!emailRegex.test(data.email)) {
       newErrors.email = 'Formato de email inválido';
