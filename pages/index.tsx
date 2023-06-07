@@ -32,7 +32,7 @@ export default function Home() {
     if (isFormSubmitted) {
       timer = setTimeout(() => {
         setIsFormSubmitted(false);
-      }, 0000);
+      }, 0);
     }
     return () => {
       clearTimeout(timer);
