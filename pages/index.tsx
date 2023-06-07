@@ -76,6 +76,9 @@ export default function Home() {
             name: '',
             cpf: '',
           });
+          setTimeout(() => {
+            setIsFormSubmitted(false);
+          }, 2000);
         })
         .catch((e) => {
           return console.log('Erro ao contactar api', e.number);
